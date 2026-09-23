@@ -16,3 +16,5 @@ print('High-Risk Transactions:', (df['Risk_Category']=='High').sum())
 print(df.loc[df['Risk_Category']=='High', ['Transaction_ID','Customer_ID','Transaction_Amount','Country','Transaction_Type','Risk_Score','Risk_Category','Is_Suspicious']].to_string(index=False))
 print(df.loc[df['High_Risk_Customer_Flag']==1, 'Customer_ID'].nunique())
 print(df.loc[df['Is_Suspicious']=='Yes','Transaction_Amount'].sum())
+
+print(df.loc[df['Is_Suspicious']=='Yes','Customer_ID'].nunique())
